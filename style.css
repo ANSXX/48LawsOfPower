@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'JejuGothic';
+    src: url(JejuGothic-Regular.ttf);
+    font-family: 'mako';
+    src: url(mako.regular.ttf)
+} 
+html, body{
+    background: #151528;
+    
+}
+.container
+{
+    margin:auto;
+    border-radius: 3.125rem;
+    background: #B92333;
+    width:auto;
+    min-width: 21.8rem;
+    height: auto;
+    min-height: 56.65rem;
+}
+
+.head
+{
+    display: grid;
+    background: #29064a;
+    border-radius: 2.3125rem 2.3125rem 0rem 0rem;
+    color: #c9a212;
+    padding: 15px;
+}
+.main-heading
+{
+    margin: 0;
+    font-size: 3rem;
+    font-family: 'JejuGothic';
+    text-align: center;
+    
+}
+.moto
+{
+    margin: 0;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+.nav-bar ul li {
+    padding: 5px;
+    list-style:none;
+    text-align: center;
+    border-left:6px solid #c9a212;
+    background: linear-gradient(to right, #c9a212 0%, #c9a212 50%, #333 50%, #333 100%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position 1s;
+    min-width: 2.5rem;
+}
+.nav-bar ul li:hover
+{
+    background-position: 0;
+    transition: 1s;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    color: #ffffffba;
+}
+.nav-bar ul li a:hover
+{
+    background-position: 0;
+    color: #151528;
+    transition: 1s;
+}
+.nav-bar ul
+{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto ;
+}
+.nav-bar
+{
+    margin: 0;
+    height: auto;
+    min-height: 2rem;
+    min-width: 21.875rem;
+    background: #333;
+    padding: 0.1px;
+    
+}
