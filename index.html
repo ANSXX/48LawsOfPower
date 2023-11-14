@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The48LawsOfPower</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The48LawsOfPower</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
                         <li><a href="https://edition.cnn.com/2010/LIVING/worklife/03/15/48.laws.of.power/" target="_blank">How to master 'The 48 Laws of Power'</a></li>
                         <li><a href="https://www.tekedia.com/the-three-pillars-of-the-48-laws-of-power-by-robert-greene/" target="_blank">The Three Pillars Of The 48 Laws Of Power</a></li>
                         <li><a href="#LAW48,1,6,15,27" target="_blank">Our Picks</a></li>
-                        <li><a href="#" target="_blank">Have Request/Suggestions?</a></li>
+                        <li><a href="#" target="_blank">Have Request/ Suggestions?</a></li>
                     </ul>
                 </li>
             <li><a href="#">ROBERT GREENE </a></li>
@@ -32,9 +32,64 @@
             </ul>
         </div>
         <div class="content">
-            <h1>LAW 1:NEVER OUTSHINE THE MASTER</h1>
-            <p>Always make those above you feel comfortably superior In your desire to please or impress them, do not go too far in displayingyour talent: oryou might accomplish the opposite-inspire fear and insecurity. Make your masters appear more brilliant than they are and you will attain the heights ofpower</p>
+            <div class="laws">
+                <div class="law1">
+                    <h1>LAW 1:NEVER OUTSHINE THE MASTER</h1>
+                    <p>Always make those above you feel comfortably superior. In your desire to please or impress them, do not go too far in displaying your talents or you might accomplish the opposite-inspire fear and insecurity. Make your masters appear more brilliant than they are and you will attain the heights of power. 
+                    </p>
+                </div>
+                <div class="law2">
+                    <h1>LAW 2: NEVER PUT TOO MUCH TRUST IN FRIENDS, LEARN HOW TO USE ENEMIES</h1>
+                    <p>
+                        Be wary of fiiends-they will betray you more quickly, for they are easily aroused to envy. They also become spoiled and tyrannical. But hire a former enemy and he will be more loyal than a friend, because he has more to prove. In fact, you have more to fear from fiiends than from enemies. If you have no enemies, find a way to make them. 
+                    </p>
+                </div>
+                <div class="law3">
+                    <h1>LAW 3: NEVER PUT TOO MUCH TRUST IN FRIENDS, LEARN HOW TO USE ENEMIES</h1>
+                    <p>
+                        Be wary of fiiends-they will betray you more quickly, for they are easily aroused to envy. They also become spoiled and tyrannical. But hire a former enemy and he will be more loyal than a friend, because he has more to prove. In fact, you have more to fear from fiiends than from enemies. If you have no enemies, find a way to make them. 
+                    </p>
+                </div>
+                <div class="law4">
+                    <h1>LAW 4: NEVER PUT TOO MUCH TRUST IN FRIENDS, LEARN HOW TO USE ENEMIES</h1>
+                    <p>
+                        Be wary of fiiends-they will betray you more quickly, for they are easily aroused to envy. They also become spoiled and tyrannical. But hire a former enemy and he will be more loyal than a friend, because he has more to prove. In fact, you have more to fear from fiiends than from enemies. If you have no enemies, find a way to make them. 
+                    </p>
+                </div>
+            </div>
+            <div class="page-nav">
+                <ul>
+                    <li><a onclick="prevLaw()">&lt; prev </a></li>
+                    <li><a id="pageNumber" >1</a></li>
+                    <li><a id="nextNumber" >2</a></li>
+                    <li><a id="prevNumber" >3</a></li>
+                    <li><a onclick="nextLaw()">next &gt;</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
+
+        <script>
+            var currentLaw = 1;
+          
+            function prevLaw() {
+              var prevLawNumber = (currentLaw - 1) > 0 ? currentLaw - 1 : 2;
+              showLaw(prevLawNumber);
+            }
+          
+            function nextLaw() {
+              var nextLawNumber = (currentLaw + 1) <= 48 ? currentLaw + 1 : 1;
+              showLaw(nextLawNumber);
+            }
+          
+            function showLaw(lawNumber) {
+              document.querySelector('.laws .law' + currentLaw).style.display = 'none';
+              document.querySelector('.laws .law' + lawNumber).style.display = 'block';
+              currentLaw = lawNumber;
+              document.getElementById("pageNumber").textContent = lawNumber;
+              document.getElementById("nextNumber").textContent = (lawNumber + 1) <= 48 ? lawNumber + 1 : 1;
+              document.getElementById("prevNumber").textContent = (currentLaw - 1) > 0 ? currentLaw - 1 : 48;
+            }
+          </script>
+          
 </body>
 </html>

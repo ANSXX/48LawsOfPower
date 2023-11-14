@@ -5,12 +5,16 @@
 } 
 html{
     background: #151528;
-    
 }
 *
 {
     cursor:url('cur.png'),auto;
 }
+a
+{
+    cursor: url('pointer_cur.png'),auto;
+}
+
 .container
 {
     margin:auto;
@@ -18,8 +22,7 @@ html{
     background: #B92333;
     width:auto;
     min-width: 21.8rem;
-    height: auto;
-    min-height: 56.65rem;
+    height: 56.65rem;
 }
 
 .head
@@ -46,7 +49,7 @@ html{
     letter-spacing: 5px;
 }
 .nav-bar ul li
- {
+{
     font-family: 'JejuGothic';
     padding: 5px;
     list-style:none;
@@ -58,17 +61,18 @@ html{
     transition: background-position 1s;
     min-width: 2.5rem;
 }
-.nav-bar ul li:hover
-{
-    background-position: 0;
-    transition: 1s;
-}
 .nav-bar ul li a{
     text-decoration: none;
     color: #ffffffba;
 }
+.nav-bar ul
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    /* transition-delay: 1.2s; */
+}
 .nav-bar ul :hover,
-.dropdown:hover
+.dropdown ul:hover
 {
     background-position: 0;
     color: #151528;
@@ -83,12 +87,6 @@ html{
     background: #333;
     padding: 0.1px;
     
-}
-.nav-bar ul
-{
-  display: grid;
-  grid-template-columns: auto auto auto auto auto; 
-
 }
 /*Hoverable dropdown menu*/
 .dropdown
@@ -107,7 +105,6 @@ html{
     float: none;
     width:17%;
     top: 35px;
-    transition:width 1s;
 }
 li:hover ul#dropdown-content
 {
@@ -117,30 +114,63 @@ li:hover ul#dropdown-content
 }
 .content
 {
-    position: absolute;
+    position: relative;
     color: #ffffffba;
     font-family: 'JejuGothic';
     text-align: center;
-    top: 20rem;
-    left: 40rem;
 }
-/* .content  h1 ,
-.content p
+.container .content 
 {
-    
-    align-items: center;
+    margin-top: 100px;
+    position: relative;
     justify-content: center;
-    display: flex;
-} */
+    display: grid;
+    grid-template-columns:repeat(auto-fit, mimax(200px, 1fr));
+}
 .content p
 {
     max-width: 60rem;
     font-size: 35px;
-    margin-left: -10%;
 }
 .content  h1 
 {
     max-width: 60rem;
     font-size: 50px;
-    margin-left: -10%;
 }
+.laws > div
+{
+    display: none;
+}
+.laws .law1, .page-nav li:nth-child(2) a 
+{
+    display: block;
+}
+.page-nav ul li a
+{
+    text-decoration: none;
+    color: #ffffff;
+    position: fixed;
+}
+.page-nav ul
+{
+    list-style:none;
+    /* display: grid;
+    grid-template-columns: auto auto auto auto auto; */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+.page-nav li {
+    margin: 0 100px;
+  }
+.page-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* background-color: #f8f8f8; */
+  }
